@@ -1,0 +1,9 @@
+o div linken met coordinaten
+
+o zoekfunctie syncronyseren met fotos
+
+o fan-control
+
+o neopixel led strip 
+
+

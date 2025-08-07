@@ -44,8 +44,17 @@ def lijst_img():
         arr.append(rij[4])
     return arr
 
+def find_coordinate(div):
+    pad_db = os.path.join("database","Database_kast.db")
+    conn = sqlite3.connect(pad_db)
+    cursor = conn.cursor()
+    cursor.execute("SELECT x FROM kast_stock")
+    x = cursor.fetchall()[div-1][0]
+    cursor.execute("SELECT y FROM kast_stock")
+    y = cursor.fetchall()[div-1][0]
+    return (x,y)
 
-
+print(find_coordinate(3))
 
 def clear():
     conn = sqlite3.connect("database/Database_kast.db")

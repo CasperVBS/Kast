@@ -2,7 +2,6 @@
 
 
 function stuurActie(actie) {
-    alert("actie: "+actie)
     fetch('/actie', {
         method: 'POST',
         headers: {

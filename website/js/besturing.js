@@ -1,11 +1,10 @@
-function stuurActie(actie) {
-    alert("actie: "+actie)
-    fetch('/actie', {
+function stuurActie(command) {
+    fetch('/move', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ actie: actie })
+        body: JSON.stringify({ move: command })
     })
     .then(response => response.text())
     .then(data => {
