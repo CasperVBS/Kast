@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>besturing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/besturing.css') }}">
+    <script src="{{ url_for('static', filename='js/besturing.js') }}"></script>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">Ga naar home</a>
+    </header>
+    <main>
+        <div id="besturingsgrid">
+            <div onclick="stuurActie('Left-up')">
+                <img src="{{ url_for('static', filename='img/besturing/up-left.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('up')">
+                <img src="{{ url_for('static', filename='img/besturing/up.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('right-up')">
+                <img src="{{ url_for('static', filename='img/besturing/up-right.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('left')">
+                <img src="{{ url_for('static', filename='img/besturing/left.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('home')">
+                <img src="{{ url_for('static', filename='img/besturing/home.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('right')">
+                <img src="{{ url_for('static', filename='img/besturing/right.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('left-down')">
+                <img src="{{ url_for('static', filename='img/besturing/down-left.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('down')">
+                <img src="{{ url_for('static', filename='img/besturing/down.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+            <div onclick="stuurActie('right-down')">
+                <img src="{{ url_for('static', filename='img/besturing/down-right.png') }}" alt="pijl"  style="height: 100%; width: 100%;"  >
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

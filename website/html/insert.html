@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/insert.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <header><a href="{{ url_for('index') }}">Ga naar home</a></header>
+    <h1>New Item</h1>
+    <form method="POST" enctype="multipart/form-data">
+
+                
+        <label for="name">naam:</label>
+        <input type="text" name="naam" required><br><br>
+
+        <label for="x">x</label>
+        <input type="number" name="x" required><br><br>
+
+        <label for="y">y</label>     
+        <input type="number" name="y" id="" required><br><br>
+
+        <label for="ilage">afbeelding: </label>
+        <input type="file" name="image" accept="image/*" required><br><br>
+        <button type="submit">Uploaden</button><br>
+
+       
+
+    </form>
+</body>
+</html>

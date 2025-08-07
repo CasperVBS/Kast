@@ -1,0 +1,28 @@
+*{
+    background-color: aliceblue;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(60, 1fr);
+    gap: 15px;
+    text-align: center;
+    
+}
+
+.item_div{
+    background-color: gainsboro;
+    aspect-ratio: 1 / 1;  
+}
+
+
+#suggesties {
+    list-style: none;
+    padding: 0;
+}
+#suggesties li {
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
