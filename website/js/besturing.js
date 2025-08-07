@@ -45,3 +45,5 @@ function stuurCommand(waarde) {
         alert(`Commando verstuurd: ${waarde}`);
     });
 }   
+
+

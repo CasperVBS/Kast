@@ -34,7 +34,18 @@ def lijst_items():
     print(arr)
     return arr
 
-lijst_items()
+def lijst_img():
+    pad_db = os.path.join("database","Database_kast.db")
+    conn = sqlite3.connect(pad_db)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM kast_stock")
+    arr = []
+    for rij in cursor.fetchall():
+        arr.append(rij[4])
+    return arr
+
+
+
 
 def clear():
     conn = sqlite3.connect("database/Database_kast.db")

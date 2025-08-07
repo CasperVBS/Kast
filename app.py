@@ -7,7 +7,7 @@ app = Flask(__name__, template_folder='website', static_folder='website')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', images = sql_communicatie.lijst_img())
 
 @app.route('/besturing')
 def besturing():
@@ -32,13 +32,16 @@ def actie():
 
     return f"Actie '{actie}' ontvangen"
 
-alle_data = sql_communicatie.lijst_items()
+
 
 @app.route('/zoek_suggesties')
 def zoek_suggesties():
+    alle_data = sql_communicatie.lijst_items()
     zoekterm = request.args.get('q', '').lower()
-    suggesties = [item for item in alle_data if zoekterm in item.lower()]
-    return jsonify({'suggesties': suggesties[:4]})
+    if len(zoekterm) != 0:
+        suggesties = [item for item in alle_data if zoekterm in item.lower()]
+        return jsonify({'suggesties': suggesties[:4]})
+    return jsonify({"suggesties":[]})
 
 @app.route('/verwerk_zoekopdracht', methods=['POST'])
 def verwerk_zoekopdracht():
@@ -82,6 +85,7 @@ def upload_image():
         
 
     return render_template('index.html')
+
 
 
 if __name__ == '__main__':
